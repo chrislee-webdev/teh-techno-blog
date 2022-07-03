@@ -17,7 +17,7 @@ async function signupFormHandler(event) {
       });
       console.log(response);
       if (response.ok) {
-        console.log('success');
+       document.location.replace('/');
       } else {
         alert(response.statusText);
       }
@@ -37,7 +37,7 @@ async function signupFormHandler(event) {
                 email,
                 password
             }),
-            headers: { 'Content-Type': 'application/json'}
+            headers: { 'Content-Type': 'application/json' }
         });
 
         if (response.ok) {

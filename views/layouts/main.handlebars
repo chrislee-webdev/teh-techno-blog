@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
     <title>Teh Techno Blog</title>
 </head>
 <body>
@@ -13,8 +14,11 @@
             </h1>
 
             <nav>
+                {{#if loggedIn}}
                 <button id="logout" class="btn-no-style">logout</button>
+                {{else}}
                 <a href="/login">login</a>
+                {{/if}}
             </nav>
         </header>
     </div>
@@ -26,8 +30,11 @@
     <footer>
         Thanks for tuning in!
     </footer>
-
+    
+    {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>
+    {{/if}}
+    
 </body>
 
 </html>
